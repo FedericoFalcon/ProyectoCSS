@@ -28,17 +28,18 @@
 header{
     display: flex;
     width: 100%;
-    height: 80px;
+    height: 70px;
     justify-content: center;
     position: relative;
     align-items: center;
-    background: rgb(10,16,57);
-    background: linear-gradient(103deg, rgba(10,16,57,1) 0%, rgba(22,22,92,1) 52%, rgba(23,53,102,1) 100%);
+    background: rgb(34,151,195);
+    background: linear-gradient(0deg, rgba(34,151,195,1) 0%, rgba(45,98,253,1) 100%);
     color: white;
 }
 #btn-perfil{
     position: absolute;
     left: 10px;
+    
 }
 #btn-carrito{
     position: absolute;
@@ -56,14 +57,17 @@ main{
     width: 80%;
     flex-flow: row wrap;
     justify-content: space-around;
-    background-color: #455d7a;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     align-items: center;
 }
 
 .plantilla-item{
     display: flex;
     margin: 10px;
-    background-color: #ffe9e3;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    border-radius: 5%;
 }
 .plantilla-izq{
     display: flex;
@@ -85,15 +89,18 @@ main{
     display: flex;
     width: 20%;
     flex-direction: column;
-    background-color: #455d7a;
-    padding: 10px;
+    justify-content: space-around;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 12%, rgba(186,202,219,1) 100%);
 
 }
 .plantilla-secundaria{
-    background-color: lightcoral;
-    width: auto;
+    background-image: url(https://img.freepik.com/premium-vector/promo-code-gift-voucher-with-coupon-code-premium-egift-card-e-commerce-online-shopping-marketing_100456-998.jpg?w=2000);
+    background-size: contain;
+    background-repeat: no-repeat;
     height: 150px;
     margin: 10px;
+    margin-left: 14%;
 }
 button{
     border-radius: 5%;
@@ -135,7 +142,10 @@ h3{
 
 footer{
     width: 100%;
-    background-color: #e3e3e3;
+    background-color: #d3d2c3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media all and (max-width: 1100px) {
@@ -147,6 +157,5 @@ footer{
     }
     .barra-secundaria{
         width: 40%;
-        justify-content: space-around;
     }
 }

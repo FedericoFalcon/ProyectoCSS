@@ -4,17 +4,12 @@
 
 ***********************************************/
 
-/* ORGANIZAR LAS DECLARACIONES EN BLOQUES*/
 
 /* ESTILOS GENERALES*/
-
-/* ESTILOS DE BARRA DE NAVEGACIÓN */
-
-/* ESTILOS DE ...*/
-
 *{
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #contenedor-general{
@@ -24,7 +19,20 @@
     height: 100%;
 }
 
+button{
+    border-radius: 10%;
+    background-color: antiquewhite;
+    color: #455d7a;
+    font-weight: 900;
+    border-color: #455d7a;
+    transition: all 0.5s ease;
+}
+    button:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
 
+/* ESTILOS DE BARRA DE NAVEGACIÓN */
 header{
     display: flex;
     width: 100%;
@@ -34,22 +42,23 @@ header{
     align-items: center;
     background: rgb(34,151,195);
     background: linear-gradient(0deg, rgba(34,151,195,1) 0%, rgba(45,98,253,1) 100%);
-    color: white;
 }
-#btn-perfil{
-    position: absolute;
-    left: 10px;
-    
-}
-#btn-carrito{
-    position: absolute;
-    right: 10px;
-}
+    #btn-perfil{
+        position: absolute;
+        left: 10px;
+        
+    }
+    #btn-carrito{
+        position: absolute;
+        right: 10px;
+    }
 
+/* ESTILOS DEL MAIN*/
 #contenedor-central{
     display: flex;
     flex-direction: row;
     width: 100%;
+    min-height: calc(100vh - 95px);
 }
 
 main{
@@ -62,29 +71,66 @@ main{
     align-items: center;
 }
 
+/* ESTILOS DE LAS PLANTILLAS CENTRALES*/
 .plantilla-item{
     display: flex;
     margin: 10px;
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     border-radius: 5%;
+    transition: all 0.5s ease;
+    transform: scale(0.9);
+    opacity: 0.9;
+    box-shadow: 0 0 5px black;
 }
+    .plantilla-item:hover{
+        transform: scale(1);
+        opacity: 1;
+        box-shadow: 0 0 10px black;
+    }
+
 .plantilla-izq{
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 10px;
 }
-.plantilla-izq img{
-    margin-bottom: 10px;
-}
+    .plantilla-izq img{
+        margin-bottom: 10px;
+    }
+    .plantilla-izq button{
+        border-radius: 5%;
+        background-color: #455d7a;
+        color: antiquewhite;
+        font-weight: 900;
+    }
+    .plantilla-izq button:hover{
+        transform: scale(1);
+    }
+
 .plantilla-der{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     margin: 10px;
 }
+    .plantilla-der .precio{
+        font-size: 30px;
+        font-weight: 900;
+    }
+    .plantilla-der p:nth-child(3){
+        color: #455d7a;
+        font-weight: 600;
+    }
+    .plantilla-der .medios-pago:hover{
+        cursor: pointer;
+    }
+    .plantilla-der h3{
+        font-size: 18px;
+        font-weight: 400;
+    }
 
+/* ESTILOS DEL ASIDE */
 .barra-secundaria{
     display: flex;
     width: 20%;
@@ -92,70 +138,47 @@ main{
     justify-content: space-around;
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,1) 12%, rgba(186,202,219,1) 100%);
-
 }
+
 .plantilla-secundaria{
     background-image: url(https://img.freepik.com/premium-vector/promo-code-gift-voucher-with-coupon-code-premium-egift-card-e-commerce-online-shopping-marketing_100456-998.jpg?w=2000);
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
     height: 150px;
     margin: 10px;
     margin-left: 14%;
+    transition: all 0.5s ease;
+    transform: scale(0.9);
+    opacity: 0.9;
 }
-button{
-    border-radius: 5%;
-    background-color: antiquewhite;
-    color: #455d7a;
-    font-weight: 900;
-}
-button:hover{
-    outline: 2px solid lightskyblue;
-    cursor: pointer;
-}
-
-.plantilla-izq button{
-    border-radius: 5%;
-    background-color: #455d7a;
-    color: antiquewhite;
-    font-weight: 900;
-}
-
-.precio{
-    font-size: 30px;
-    font-weight: 900;
-}
-.medios-pago{
-    color: #455d7a;
-    font-weight: 600;
-}
-.medios-pago:hover{
-    cursor: pointer;
-}
-h3{
-    font-size: 18px;
-    font-weight: 400;
-}
+    .plantilla-secundaria:hover{
+        transform: scale(1);
+        opacity: 1;
+        cursor: pointer;
+    }
 
 
-
-
-
+/* ESTILOS DEL FOOTER */
 footer{
     width: 100%;
     background-color: #d3d2c3;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: 600;
 }
 
+/* MEDIA QUERIE */
 @media all and (max-width: 1100px) {
     main{
         display: flex;
         flex-flow: column nowrap;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
     }
     .barra-secundaria{
         width: 40%;
     }
 }
+
